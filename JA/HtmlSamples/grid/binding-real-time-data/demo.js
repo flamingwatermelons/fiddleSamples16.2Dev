@@ -21,18 +21,12 @@ $(function () {
 				change: function( event, ui ) {
 					realTimeData.server.stopFeed();
 					setTimeout(function () {
-					    //If the Data Feed was running before moving the slider this means that the button is saying "Stop Data Feed". We initiate the feed but do not change the button.
-					    //Otherwise the startDataFeed button needs to be pressed after moving the slider to start feeding data.
-					    if (started) {
-                            //We set the started to false here since we stopped it above but wanted to check if the button is active.
-					        started = false;
-					        toggleFeed(false);
-					    }
+						realTimeData.server.startFeed(ui.value.toString());
 					}, 100);
 				},
 				min: 500,
 				max: 3000,
-				value: 1500,
+				value: 400,
 				step: 500
 			});
 
