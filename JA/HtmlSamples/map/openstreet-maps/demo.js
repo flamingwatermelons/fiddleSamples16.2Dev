@@ -1,4 +1,5 @@
-$(function () {
+$(function () {           
+
             $("#map").igMap({
                 width: "700px",
                 height: "500px",
@@ -19,7 +20,9 @@ $(function () {
                     markerBrush: "#b51c1c",
                     showTooltip: true,
                     tooltipTemplate: "tooltipTemplate"
-                }]
+                }],
+                
+                
             });
-            $("#map").find(".ui-widget-content").append("<span class='copyright-notice'><a href='http://www.openstreetmap.org/copyright'>© OpenStreetMap contributors</a></span>")
+
         });
