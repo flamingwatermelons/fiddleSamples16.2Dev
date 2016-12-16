@@ -85,15 +85,15 @@ $(function () {
         }
 
         function handleFileDrop(evt) {
-			evt.originalEvent.stopPropagation();
-			evt.originalEvent.preventDefault();
+            evt.stopPropagation();
+            evt.preventDefault();
 
             var $upload = $("#igUpload1"),
               files = evt.originalEvent.dataTransfer.files,
               output = []; // files is a FileList of File objects. List some properties.
 
             // Invoke file upload
-            $upload.igUpload('container').trigger(evt);
+            $upload.data('igUpload')._dropFiles(evt);
             // remove the drop zone element
             $("#dropZone").remove();
             // reset drop counter

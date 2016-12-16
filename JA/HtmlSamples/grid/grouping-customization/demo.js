@@ -17,21 +17,26 @@ $(function () {
                             {
                                 columnKey: "Name",
                                 isGroupBy: true,
-                                compareFunc: groupByFirstLetter,
-								groupLabelFormatter: function (val) {
-									val = val || "";
-									return val.substring(0, 1);
-								}
+                                groupComparerFunction: groupByFirstLetter
                             }
                         ]
                     }
                 ]
             });
         });
-        function groupByFirstLetter(val1, val2) {
-        	val1 = val1 || "";
-        	val2 = val2 || "";
-        	val1 = val1.substring(0, 1);
-        	val2 = val2.substring(0, 1);
-        	return val1 > val2 ? 1 : val1 < val2 ? -1 : 0;
+        function groupByFirstLetter(columnSetting, val1, val2) {
+            if (val1 !== null && val2 !== null && val1.substring(0, 1) === val2.substring(0, 1)) {
+                columnSetting.customGroupName = val1.substring(0, 1);
+                return true;
+            } else if (val1 !== null && val2 !== null && val1.substring(0, 1) !== val2.substring(0, 1)) {
+                columnSetting.customGroupName = val1.substring(0, 1);
+                return false;
+            } else if (val1 === null && val2 !== null) {
+                columnSetting.customGroupName = val2.substring(0, 1);
+                return false;
+            } else if (val1 !== null && val2 === null) {
+                columnSetting.customGroupName = val1.substring(0, 1);
+                return false;
+            }
+            return false;
         }

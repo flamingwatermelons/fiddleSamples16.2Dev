@@ -99,6 +99,7 @@ $(function () {
                 catch (e) {
                     return;
                 }
+
             });
             function moveItem(step, currentIndex) {
                 var state = getCurrentItemState(currentIndex),
