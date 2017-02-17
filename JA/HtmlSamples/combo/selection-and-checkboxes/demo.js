@@ -1,14 +1,14 @@
 $(function () {
 var colors = [
-            { Name: "$$(IgniteUI)" },
-            { Name: "$$(ASP)" },
-            { Name: "$$(WinForms)" },
-            { Name: "$$(WPF)" },
-            { Name: "$$(Android)" },
-            { Name: "$$(iOS)" },
-            { Name: "$$(SharePlus)" },
-            { Name: "$$(ReportPlus)" },
-            { Name: "$$(Indigo)" }
+            { Name: "jQuery/HTML5/ASP.NET MVC コントロール" },
+            { Name: "ASP.NET コントロール" },
+            { Name: "Windows Forms コントロール" },
+            { Name: "WPF コントロール" },
+            { Name: "Android ネイティブ モバイル コントロール" },
+            { Name: "iOS コントロール" },
+            { Name: "SharePlus" },
+            { Name: "ReportPlus" },
+            { Name: "Indigo Studio" }
         ];
 
         $(function () {
