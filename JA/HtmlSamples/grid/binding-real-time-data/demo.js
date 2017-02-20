@@ -129,13 +129,13 @@ $(function () {
 								columnKey: "Change",
 								customConditions: {
 									Positive: {
-									    labelText: "Positive",
+									    labelText: "正数",
 										expressionText: "Positive",
 										requireExpr: false,
 										filterFunc: filterPositiveChangeItems
 									},
 									Negative: {
-									    labelText: "Negative",
+									    labelText: "負数",
 										expressionText: "Negative",
 										requireExpr: false,
 										filterFunc: filterNegativeChangeItems
