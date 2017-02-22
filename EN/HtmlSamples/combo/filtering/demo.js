@@ -6,9 +6,8 @@ $(function () {
                 valueKey: "ProductID",
                 dataSource: northwindProducts,
                 filteringType: "local",
-                highlightMatchesMode: "startsWith",
-                filteringCondition: "startsWith",
-                autoComplete: true
+                autoComplete: true,
+                placeHolder: "Focus me."
             });
 
             $("#filterContainsCombo").igCombo({
@@ -18,7 +17,8 @@ $(function () {
                 dataSource: northwindProducts,
                 filteringType: "local",
                 filteringCondition: "contains",
-                highlightMatchesMode: "contains"
+                highlightMatchesMode: "contains",
+                placeHolder: "Focus me."
             });
 
             $("#caseSensitiveCombo").igCombo({
@@ -29,9 +29,46 @@ $(function () {
                 filteringType: "local",
                 autoSelectFirstMatch: true,
                 caseSensitive: true,
-                autoComplete: true
+                autoComplete: true,
+                placeHolder: "Focus me."
             });
 
+
+            $("#autoCompleteCombo").igNotifier({
+                showOn: "focus",
+                state: "success",
+                direction: "auto",
+                closeOnBlur: true,
+                showIcon: false,
+                mode: "popover",
+                messages: {
+                    success: "When autoComplete is enabled, the filtering condition is always 'startsWith'. Start typing .."
+                }
+            });
+
+            $("#filterContainsCombo").igNotifier({
+                showOn: "focus",
+                state: "success",
+                direction: "auto",
+                showIcon: false,
+                closeOnBlur: true,
+                mode: "popover",
+                messages: {
+                    success: "Type some text in order to check how 'Contains' filtering condition works"
+                }
+            });
+
+            $("#caseSensitiveCombo").igNotifier({
+                showOn: "focus",
+                state: "success",
+                direction: "auto",
+                showIcon: false,
+                closeOnBlur: true,
+                mode: "popover",
+                messages: {
+                    success: "If set to true, filtering and auto selection will be case-sensitive."
+                }
+            });
         });
 
      
