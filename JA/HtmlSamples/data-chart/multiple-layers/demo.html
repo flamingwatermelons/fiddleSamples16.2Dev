@@ -7,10 +7,24 @@
 <link href="http://dev.igniteui.local/16-2/IgniteUI/css/structure/infragistics.css" rel="stylesheet"></link>
 <script src="http://dev.igniteui.local/16-2/IgniteUI/js/i18n/infragistics-ja.js"></script>
 
-<div id="chart"></div>
-    <br/>
-    
-    <div class="USCensus-attribution">
-        人口のデータ ソース:<br />
-        <a href="http://www.census.gov/" target="_blank">U.S. Census Bureau</a>
-    </div>
+<div>
+		<div class="layer-type">
+			<input type="checkbox" id="crosshair" checked="checked"></input> Crosshair Layer
+		</div>
+		<div class="layer-type">
+			<input type="radio" name="highlight" value="highlight"></input> Highlight Layer <br />
+			<input type="radio" name="highlight" value="highlightItem" checked="checked"></input> Highlight Item Layer
+		</div>
+		<div class="layer-type">
+			<input type="radio" name="tooltip" value="tooltip" checked="checked"></input> Tooltip Layer <br />
+			<input type="radio" name="tooltip" value="tooltipItem"></input> Tooltip Item Layer
+		</div>
+		<div class="float-clear"></div>
+
+		<div id="chart"></div><br />
+
+		<div class="USCensus-attribution">
+			人口のデータ ソース:<br />
+			<a href="http://www.census.gov/" target="_blank">U.S. Census Bureau</a>
+		</div>
+	</div>
