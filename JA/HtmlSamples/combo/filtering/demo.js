@@ -42,7 +42,7 @@ $(function () {
                 showIcon: false,
                 mode: "popover",
                 messages: {
-                    success: "StartsWith フィルター条件およびオートコンプリート"
+                    success: "autoComplete が有効な場合、フィルタリング条件は常に 'startsWith' です。入力を開始してください。"
                 }
             });
 
@@ -54,7 +54,7 @@ $(function () {
                 closeOnBlur: true,
                 mode: "popover",
                 messages: {
-                    success: "Contains フィルター条件"
+                    success: "「Contains」フィルター条件を使用するには、テキストを入力します。"
                 }
             });
 
@@ -66,7 +66,7 @@ $(function () {
                 closeOnBlur: true,
                 mode: "popover",
                 messages: {
-                    success: "大文字と小文字の区別"
+                    success: "true に設定されている場合、フィルタリングおよび自動選択が大文字と小文字を区別します。"
                 }
             });
         });
